@@ -403,7 +403,7 @@ function Main() {
             }}
           >
             <Text fontSize={13}>
-              Balance: {swapFrom.balance} {swapFrom.name}
+              Balance: {swapFrom.balance.toFixed(8)} {swapFrom.name}
             </Text>
           </Button>
         </Box>
@@ -441,7 +441,7 @@ function Main() {
             }}
           >
             <Text fontSize={13}>
-              Balance: {swapTo.balance} {swapTo.name}
+              Balance: {swapTo.balance.toFixed(8)} {swapTo.name}
             </Text>
           </Button>
         </Box>
