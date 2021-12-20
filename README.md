@@ -3,7 +3,9 @@
 Dapp for VRK token swap
 
 - Connect to Ropsten Network
-- Usage similar to Dex like Uniswap
+- Swap ETH to VRK
+- Approve VRK
+- Swap VRK to ETH
 
 ### Screenshot
 

@@ -72,7 +72,7 @@ function Main() {
   // Toast
   const toast = useToast();
 
-  // Initial load
+  // Load iniitial data
   useEffect(() => {
     let stale = false;
 
@@ -233,6 +233,7 @@ function Main() {
         duration: 9000,
         isClosable: true,
       });
+      setIsLoading(false);
     }
   };
 
@@ -251,6 +252,12 @@ function Main() {
     const amount = parseEther(swapFromAmount);
 
     if (swapFrom.balance < parseFloat(swapFromAmount)) {
+      toast({
+        title: "Low balance",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
       return;
     }
     setIsLoading(true);
@@ -339,7 +346,7 @@ function Main() {
     }
   };
 
-  // Change swap from input field
+  // Change swapFrom input field
   const swapFromChange = (val: string) => {
     setSwapFromAmount(val);
     const amount = parseFloat(val);
@@ -352,7 +359,7 @@ function Main() {
     }
   };
 
-  // Change swap to input field
+  // Change swapTo input field
   const swapToChange = (val: string) => {
     setSwapToAmount(val);
     const amount = parseFloat(val);
